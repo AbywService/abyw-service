@@ -1,0 +1,86 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+.container {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+.section {
+    margin-bottom: 30px;
+}
+.section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.icon {
+    height: 24px;
+    margin-right: 10px;
+}
+.star {
+    color: gold;
+    font-size: 1.4em;
+    margin-right: 8px;
+}
+.item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 12px 15px;
+    margin: 6px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    background-color: #00bcd4;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0097a7;
+}
+.payment {
+    text-align: center;
+    margin-top: 30px;
+}
+.card {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.owner {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.cards img {
+    height: 60px;
+    width: auto;
+}

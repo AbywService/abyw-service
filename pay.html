@@ -1,43 +1,63 @@
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Оплата — Abyw Service</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Payment - ABYW SERVICE</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">Abyw Service</div>
+<div class="container">
+    <h1>Choose Payment Method</h1>
+    <div class="cards">
+        <button onclick="selectCard('HUMO')"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Humo_card_logo.svg" alt="HUMO"></button>
+        <button onclick="selectCard('UZCARD')"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Uzcard_logo.svg" alt="UZCARD"></button>
+        <button onclick="selectCard('VISA')"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="VISA"></button>
+    </div>
 
-  <div class="container">
-    <h2>Оплата товара</h2>
-    <p id="selectedProduct"></p>
+    <div id="cardInfo" class="payment" style="display:none;">
+        <h2 id="cardName"></h2>
+        <p class="card" id="cardNumber"></p>
+        <p class="owner">O KAMALOVA</p>
+        <div id="timer">60 seconds</div>
+        <button onclick="redirect()">I HAVE PAID</button>
+    </div>
+</div>
 
-    <div class="card-number">4023 0601 4258 5032</div>
-    <div class="card-owner">O.KAMALOVA</div>
-    
-    <div class="timer" id="timer">⏳ Осталось: 60 секунд</div>
-    <button onclick="finishPayment()">Я оплатил</button>
-  </div>
+<script>
+    let timerInterval;
+    function selectCard(type) {
+        document.getElementById("cardInfo").style.display = "block";
+        let cardName = document.getElementById("cardName");
+        let cardNumber = document.getElementById("cardNumber");
+        if (type === 'HUMO') {
+            cardName.innerText = "HUMO Card";
+            cardNumber.innerText = "9860 1766 2085 4073";
+        } else if (type === 'UZCARD') {
+            cardName.innerText = "UZCARD";
+            cardNumber.innerText = "5614 6849 0241 9280";
+        } else {
+            cardName.innerText = "VISA Card";
+            cardNumber.innerText = "4023 0601 4258 5032";
+        }
 
-  <script>
-    document.getElementById("selectedProduct").innerText =
-      "Вы выбрали: " + localStorage.getItem("selectedProduct");
-
-    let time = 60;
-    let timer = setInterval(() => {
-      time--;
-      document.getElementById("timer").innerText = "⏳ Осталось: " + time + " секунд";
-      if (time <= 0) {
-        clearInterval(timer);
-        document.getElementById("timer").innerText = "✅ Время вышло";
-      }
-    }, 1000);
-
-    function finishPayment() {
-      window.location.href = "https://t.me/xaa702";
+        clearInterval(timerInterval);
+        let timeLeft = 60;
+        const timer = document.getElementById("timer");
+        timer.innerText = timeLeft + " seconds";
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            timer.textContent = timeLeft + " seconds";
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                timer.textContent = "Time expired";
+            }
+        }, 1000);
     }
-  </script>
+
+    function redirect() {
+        window.location.href = "https://t.me/xaa702";
+    }
+</script>
 </body>
 </html>
