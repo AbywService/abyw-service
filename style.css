@@ -1,78 +1,76 @@
 
 body {
-  font-family: 'Rubik', sans-serif;
-  background: linear-gradient(135deg, #74b9ff, #0984e3);
-  margin: 0;
-  padding: 40px;
-  text-align: center;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
 }
-
-.header {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  font-size: 28px;
-  font-weight: 800;
-  color: white;
-  opacity: 0.9;
-}
-
 .container {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 40px;
-  border-radius: 20px;
-  max-width: 600px;
-  margin: 100px auto;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
-
-h2, h3 {
-  color: #fff;
-  font-weight: 700;
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 25px;
 }
-
-.products h3 {
-  margin-top: 25px;
+.section {
+    margin-bottom: 30px;
 }
-
+.section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.icon {
+    height: 24px;
+    margin-right: 10px;
+}
+.star {
+    color: gold;
+    font-size: 1.4em;
+    margin-right: 8px;
+}
+.item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 12px 15px;
+    margin: 6px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 button {
-  background-color: #00cec9;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 15px;
-  margin: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: 600;
+    background-color: #00bcd4;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
-
 button:hover {
-  background-color: #0984e3;
+    background-color: #0097a7;
 }
-
-.card-number {
-  font-size: 22px;
-  font-weight: bold;
-  background: #dff9fb;
-  padding: 14px;
-  border-radius: 10px;
-  margin-top: 20px;
-  color: #2d3436;
-  user-select: all;
+.payment {
+    text-align: center;
+    margin-top: 30px;
 }
-
-.card-owner {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #ffffff;
+.card {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
 }
-
-.timer {
-  font-size: 18px;
-  margin-top: 15px;
-  color: #ffeaa7;
-  font-weight: 600;
+.owner {
+    font-style: italic;
+    margin-bottom: 15px;
 }

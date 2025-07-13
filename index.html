@@ -1,38 +1,54 @@
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Abyw Service — Товары</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>ABYW SERVICE</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">Abyw Service</div>
-
-  <div class="container">
-    <h2>Выберите товар</h2>
-
-    <div class="products">
-      <h3>Telegram Premium</h3>
-      <button onclick="buy('1 месяц - 45 000 UZS')">1 месяц — 45.000 UZS</button>
-      <button onclick="buy('3 месяца - 170 000 UZS')">3 месяца — 170.000 UZS</button>
-      <button onclick="buy('6 месяцев - 220 000 UZS')">6 месяцев — 220.000 UZS</button>
-      <button onclick="buy('12 месяцев - 250 000 UZS')">12 месяцев — 250.000 UZS</button>
-
-      <h3>Telegram Stars</h3>
-      <button onclick="buy('100 Stars - 35 000 UZS')">100 Stars — 35.000 UZS</button>
-      <button onclick="buy('250 Stars - 70 000 UZS')">250 Stars — 70.000 UZS</button>
-      <button onclick="buy('500 Stars - 125 000 UZS')">500 Stars — 125.000 UZS</button>
-      <button onclick="buy('1000 Stars - 350 000 UZS')">1.000 Stars — 350.000 UZS</button>
+    <div class="container">
+        <h1>ABYW SERVICE</h1>
+        <div class="products">
+            <div class="section">
+                <h2><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="icon"> Telegram Premium</h2>
+                <div class="item">1 month — 45,000 UZS <button>Buy</button></div>
+                <div class="item">3 months — 170,000 UZS <button>Buy</button></div>
+                <div class="item">6 months — 220,000 UZS <button>Buy</button></div>
+                <div class="item">12 months — 250,000 UZS <button>Buy</button></div>
+            </div>
+            <div class="section">
+                <h2><span class="star">★</span> Telegram Stars</h2>
+                <div class="item">100 stars — 35,000 UZS <button>Buy</button></div>
+                <div class="item">250 stars — 70,000 UZS <button>Buy</button></div>
+                <div class="item">500 stars — 125,000 UZS <button>Buy</button></div>
+                <div class="item">1000 stars — 350,000 UZS <button>Buy</button></div>
+            </div>
+        </div>
+        <div class="payment">
+            <h2>Payment</h2>
+            <p class="card">4023 0601 4258 5032</p>
+            <p class="owner">O KAMALOVA</p>
+            <div id="timer">60 seconds</div>
+            <button onclick="redirect()">I HAVE PAID</button>
+        </div>
     </div>
-  </div>
 
-  <script>
-    function buy(product) {
-      localStorage.setItem('selectedProduct', product);
-      window.location.href = "pay.html";
-    }
-  </script>
+    <script>
+        let timeLeft = 60;
+        const timer = document.getElementById("timer");
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timer.textContent = timeLeft + " seconds";
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timer.textContent = "Time expired";
+            }
+        }, 1000);
+
+        function redirect() {
+            window.location.href = "https://t.me/xaa702";
+        }
+    </script>
 </body>
 </html>
