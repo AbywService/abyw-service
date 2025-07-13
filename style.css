@@ -1,0 +1,109 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+.main-box {
+    max-width: 500px;
+    background: white;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.header {
+    background: #1e66b2;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.content {
+    padding: 25px;
+}
+h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 18px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+.icon {
+    height: 20px;
+    margin-right: 10px;
+}
+.star {
+    color: gold;
+    font-size: 20px;
+    margin-right: 8px;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f4f9;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+}
+.item button {
+    padding: 5px 10px;
+    background-color: #1e66b2;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.card-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.card-icons button {
+    border: none;
+    background: none;
+}
+.card-icons img {
+    height: 40px;
+}
+.card-display {
+    background: #2f3a4c;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+.card-header {
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-number {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.card-name {
+    font-size: 14px;
+    color: #ddd;
+}
+#timer {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+.pay-btn {
+    background: #2f3a4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}

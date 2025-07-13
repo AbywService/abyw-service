@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Payment Method - ABYW SERVICE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main-box">
+    <div class="header">Abyw Service</div>
+    <div class="content">
+        <h2>Choose Payment Method</h2>
+        <div class="card-icons">
+            <button onclick="selectCard('HUMO')"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Humo_card_logo.svg" alt="HUMO"></button>
+            <button onclick="selectCard('UZCARD')"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Uzcard_logo.svg" alt="UZCARD"></button>
+            <button onclick="selectCard('VISA')"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="VISA"></button>
+        </div>
+        <div class="card-display" id="cardDisplay" style="display:none;">
+            <div class="card-header" id="cardType">HUMO</div>
+            <div class="card-number" id="cardNumber">0000 0000 0000 0000</div>
+            <div class="card-name">O.KAMALOVA</div>
+        </div>
+        <p id="timer">60 seconds remaining</p>
+        <button onclick="redirect()" class="pay-btn">I HAVE PAID</button>
+    </div>
+</div>
+
+<script>
+    let countdown;
+    function selectCard(type) {
+        document.getElementById("cardDisplay").style.display = "block";
+        let cardType = document.getElementById("cardType");
+        let cardNumber = document.getElementById("cardNumber");
+        if (type === 'HUMO') {
+            cardType.textContent = "HUMO";
+            cardNumber.textContent = "9860 1766 2085 4073";
+        } else if (type === 'UZCARD') {
+            cardType.textContent = "UZCARD";
+            cardNumber.textContent = "5614 6849 0241 9280";
+        } else {
+            cardType.textContent = "VISA";
+            cardNumber.textContent = "4023 0601 4258 5032";
+        }
+        clearInterval(countdown);
+        let timeLeft = 60;
+        const timer = document.getElementById("timer");
+        countdown = setInterval(() => {
+            timeLeft--;
+            timer.textContent = timeLeft + " seconds remaining";
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timer.textContent = "Time expired";
+            }
+        }, 1000);
+    }
+
+    function redirect() {
+        window.location.href = "https://t.me/xaa702";
+    }
+</script>
+</body>
+</html>
