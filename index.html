@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abuw Service</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" class="logo" alt="logo" />
+        <h1>Abuw Service</h1>
+        <div class="lang-switch">
+            <button onclick="setLanguage('ru')">RU</button>
+            <button onclick="setLanguage('uz')">UZ</button>
+            <button onclick="setLanguage('en')">EN</button>
+        </div>
+        <button onclick="toggleTheme()" class="theme-toggle">🌙</button>
+    </header>
+    <main>
+        <section class="products" id="product-list">
+            <!-- Товары появятся здесь -->
+        </section>
+        <div id="cart" class="cart">
+            <h2>Корзина</h2>
+            <ul id="cart-items"></ul>
+            <button onclick="checkout()">Оформить заказ</button>
+        </div>
+    </main>
+    <footer>
+        <p id="footer-text">© Abuw Service 2025</p>
+    </footer>
+</body>
+</html>
